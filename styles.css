@@ -110,6 +110,34 @@ header {
 
 
 }
+/*--------- Button-----------*/
+.myButton {
+	box-shadow:inset 0px 0px 0px 0px #f9eca0;
+	background:linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
+	background-color:#f0c911;
+	border-radius:6px;
+	display:inline-block;
+	cursor:pointer;
+	color:#c92200;
+  font-family: 'Yusei Magic', sans-serif;
+	font-size:18px;
+  font-weight:bold;
+  padding:21px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+  margin-bottom:50px;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
+	background-color:#f2ab1e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+     
+
 
 /*-----hero image logo */
 
@@ -131,6 +159,9 @@ header {
      on the container's size */
   background-size: cover;
   margin-top:-55px;
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
   
 
   
@@ -174,7 +205,7 @@ header {
  #description{
 
     width:100%;
-    height:600px;
+    height:750px;
     background-color: #A82810;
     display:flex;
    
@@ -225,7 +256,7 @@ header {
  /*------food menu ----*/
 
  #food-menu{
-   height:1000px;
+   height:1100px;
    font-family: 'Yusei Magic', sans-serif;
    display:flex;
    justify-content: flex-start;
