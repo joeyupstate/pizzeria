@@ -34,8 +34,8 @@ header {
 
 /* burger menu */
 #nav span {
-  height: 6px;
-  width: 40px;
+  height: 4px;
+  width: 30px;
   display: block;
   background: white;
   border-radius: 10px;
@@ -111,7 +111,7 @@ header {
 
 }
 /*--------- Button-----------*/
-.myButton {
+#myButton {
 	box-shadow:inset 0px 0px 0px 0px #f9eca0;
 	background:linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
 	background-color:#f0c911;
@@ -126,12 +126,13 @@ header {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ded17c;
   margin-bottom:50px;
+  border:2px solid red;
 }
-.myButton:hover {
+#myButton:hover {
 	background:linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
 	background-color:#f2ab1e;
 }
-.myButton:active {
+#myButton:active {
 	position:relative;
 	top:1px;
 }
@@ -222,6 +223,7 @@ header {
      color:white;
      font-family: 'Yusei Magic', sans-serif;
      font-size:45px;
+   
   
  
 
@@ -266,6 +268,7 @@ header {
 
  #food-menu h1 {
    font-size:45px;
+   text-decoration: underline;
  }
 
  #food-menu h2{
@@ -289,8 +292,9 @@ header {
   justify-content: center;
   align-items:center;
   flex-direction:column;
-  height:1050px;
+  height:1020px;
   margin-top:20px;
+ 
 }
 #specials #specials-bar{
   width:100%;
@@ -325,48 +329,42 @@ header {
 
   font-family: 'Yusei Magic', sans-serif;
   font-size:45px;
+  text-decoration: underline;
 
 }
 #map-area{
   height:600px;
   width:100%;
   background-color: #A82810;
+  
 }
 
 /* ---footer  ----*/
 
 footer{
-  height:300px;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items:center;
+  height:200px;
+display:block;
   margin-top:0;
-
-}
-footer h1{
-   font-family: 'Yusei Magic', sans-serif;
-   font-size:45px;
-   margin-bottom:10px;
-}
-
-#contact-info{
-  width:100%;
-  background-color:#A82810;
   font-family: 'Yusei Magic', sans-serif;
-
+  text-align: center;
 
 }
+footer h3{
+  text-decoration: underline;
+}
+
+
 
 #social{
   height:70px;
  
   width:100%;
-  border-bottom: 5px solid black;
+
   display:flex;
   flex-direction: row;
   justify-content: center;
   align-items:center;
+  border-bottom: 3px solid black;
 
 }
 
