@@ -125,8 +125,8 @@ header {
   padding:21px 37px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ded17c;
-  margin-bottom:50px;
-  border:2px solid red;
+  margin-bottom:150px;
+  border:4px solid red;
 }
 #myButton:hover {
 	background:linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
@@ -143,8 +143,8 @@ header {
 /*-----hero image logo */
 
 #hero-image-logo{
-    background-image:url("./photos/pizza.jpg");
-    height:550px;
+    background-image:url("./assets/pizzafullscreen.jpg");
+    height:900px;
     width:100%;
       /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
@@ -170,30 +170,6 @@ header {
 
 }
 
-/* -------------photo carosel--------------- */
-.simple-slider {
-  position: relative;
-  width: 100%;
-  z-index:1;
-  margin-top:-100px;
-}
-.simple-slider_item {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  -webkit-transition: opacity 2s;
-  transition: opacity 2s;
-}
-
-.simple-slider_item img{
-    height:450px;
-    width:100%;
-}
-.is-hidden {
-  opacity: 0;
-  z-index: -1;
-}
 /* logo-----------------------*/
 
 #logo{
@@ -332,11 +308,40 @@ header {
   text-decoration: underline;
 
 }
+
+iframe{
+  width:95%;
+  margin-bottom:10px;
+}
 #map-area{
-  height:600px;
+  height:800px;
   width:100%;
   background-color: #A82810;
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  align-items: center;
+
   
+}
+
+#map-area img{
+  height:50px;
+  width:50px;
+}
+
+#map-area h2{
+  font-family: 'Yusei Magic', sans-serif;
+  color:white;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 30px;
+}
+#map-area ul{
+  list-style-type:none;
+  font-family: 'Yusei Magic', sans-serif;
+  color:white;
+  font-size: 30px;
 }
 
 /* ---footer  ----*/
@@ -376,7 +381,590 @@ footer h3{
 
 
 
-  @media only screen and (max-width: 600px) {
+
+
+
+/*  I pad pro----------------------------------*/
+@media only screen and (max-width: 1025px){
+  header {
+    height: 50px;
+    width: 100%;
+   
+  }
+  
+  #nav {
+    position: relative;
+    display: block;
+  }
+  
+  #nav input {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 0px;
+    left: 920px;
+    z-index: 5;
+    opacity: 0;
+  }
+  
+  /* burger menu */
+  #nav span {
+    height: 8px;
+    width: 40px;
+    display: block;
+    background: white;
+    border-radius: 10px;
+    margin: 4px;
+    position: relative;
+    z-index: 4;
+    left: 920px;
+    top: 15px;
+  
+    transform-origin: 4px 0px;
+  
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+  /*------------------- burger transformations ------------------*/
+  #nav span:first-child {
+    transform-origin: 0% 0%;
+  }
+  
+  #nav span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  #nav input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -2px);
+    background: #232323;
+  }
+  #nav input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  #nav input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, 0px);
+  }
+  
+  /*------------Food menu *---------------*/
+  #menu {
+    height: 0vh;
+    width: 100%;
+    background: white;
+    opacity: 1;
+    margin-top: -40px;
+    transition: height 0.5s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:2;
+    position:absolute;
+  }
+  
+  #nav input:checked ~ #menu {
+    height: 100vh;
+    transition: height 0.5s ease-in;
+    opacity: 0.8;
+  }
+  
+  #menu ul {
+    list-style-type: none;
+    font-size: 30px;
+    opacity: 0;
+    height:100px;
+    font-family: 'Yusei Magic', sans-serif;
+    margin-top:-120px;
+  }
+  #nav input:checked ~ #menu ul {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  #menu li {
+    margin:20px;
+    color:#F67B50;
+  
+  
+  }
+  /*--------- Button-----------*/
+  #myButton {
+    box-shadow:inset 0px 0px 0px 0px #f9eca0;
+    background:linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
+    background-color:#f0c911;
+    border-radius:6px;
+    display:inline-block;
+    cursor:pointer;
+    color:#c92200;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size:18px;
+    font-weight:bold;
+    padding:21px 37px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ded17c;
+    margin-bottom:150px;
+    border:4px solid red;
+  }
+  #myButton:hover {
+    background:linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
+    background-color:#f2ab1e;
+  }
+  #myButton:active {
+    position:relative;
+    top:1px;
+  }
+  
+       
+  
+  
+  /*-----hero image logo */
+  
+  #hero-image-logo{
+      background-image:url("./assets/pizzafullscreen.jpg");
+      height:900px;
+      width:100%;
+        /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+    
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+    
+    /* Background image is fixed in the viewport so that it doesn't move when 
+       the content's height is greater than the image's height */
+  
+    
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
+    margin-top:-55px;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+  
+    
+    
+  
+  }
+  
+  /* logo-----------------------*/
+  
+  #logo{
+     
+      position:relative;
+      bottom:300px;
+  }
+   /*----------description and order */
+  
+   #description{
+  
+      width:100%;
+      height:750px;
+      background-color: #A82810;
+      display:flex;
+     
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      margin-top:-10px;
+      
+   
+    
+   }
+  
+   #description h1{
+       color:white;
+       font-family: 'Yusei Magic', sans-serif;
+       font-size:45px;
+     
+    
+   
+  
+       
+   }
+  
+   #description h1:last-child{
+    color:white;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size:65px;
+  }
+  
+  #description img{
+    height:80px;
+    width:80px;
+    color:white;
+    margin-top:-40px;
+    margin-bottom:-30px;
+  }
+   #description p{
+     color:white;
+     font-family: 'Yusei Magic', sans-serif;
+     width:90%;
+     text-align:justify;
+   }
+  
+   #description h1:nth-child(2){
+      
+   }
+  
+  
+   /*------food menu ----*/
+  
+   #food-menu{
+     height:1100px;
+     font-family: 'Yusei Magic', sans-serif;
+     display:flex;
+     justify-content: flex-start;
+     align-items: center;
+     flex-direction: column;
+   }
+  
+   #food-menu h1 {
+     font-size:45px;
+     text-decoration: underline;
+   }
+  
+   #food-menu h2{
+     color:#A82810;
+     margin-bottom:-5px;
+   }
+  
+  #food-menu ul{
+    list-style-type: none;
+  }
+  
+  .item-description{
+    color:grey;
+    margin-bottom:5px;
+  }
+  
+  
+  /*--------------specials----*/
+  #specials{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:column;
+    height:1800px;
+    margin-top:20px;
+   
+  }
+  #specials #specials-bar{
+    width:100%;
+    height:170px;
+    background-color: #A82810;
+    color:white;
+     font-family: 'Yusei Magic', sans-serif;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+    
+     
+  }
+  
+  #specials img{
+    height:600px;
+    width:100%;
+  }
+  
+  
+  /*----------find us section -----------*/
+  #find-us{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top:0;
+  }
+  
+  #find-us h1{
+  
+    font-family: 'Yusei Magic', sans-serif;
+    font-size:45px;
+    text-decoration: underline;
+  
+  }
+  
+  iframe{
+    width:95%;
+    margin-bottom:10px;
+  }
+  #map-area{
+    height:800px;
+    width:100%;
+    background-color: #A82810;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+  
+    
+  }
+  
+  #map-area img{
+    height:50px;
+    width:50px;
+  }
+  
+  #map-area h2{
+    font-family: 'Yusei Magic', sans-serif;
+    color:white;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+  }
+  #map-area ul{
+    list-style-type:none;
+    font-family: 'Yusei Magic', sans-serif;
+    color:white;
+    font-size: 30px;
+  }
+  
+  /* ---footer  ----*/
+  
+  footer{
+    height:200px;
+  display:block;
+    margin-top:0;
+    font-family: 'Yusei Magic', sans-serif;
+    text-align: center;
+  
+  }
+  footer h3{
+    text-decoration: underline;
+  }
+  
+  
+  
+  #social{
+    height:70px;
+   
+    width:100%;
+  
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    border-bottom: 3px solid black;
+  
+  }
+  
+  #social img{
+    height:40px;
+    width:40px;
+    margin:10px;
+  }
+
+
+}
+
+/* ipad------------------------------------*/
+
+@media only screen and (max-width: 780px) {
+  #nav input {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 0px;
+    left: 720px;
+    z-index: 5;
+    opacity: 0;
+  }
+  
+  /* burger menu */
+  #nav span {
+    height: 8px;
+    width: 40px;
+    display: block;
+    background: white;
+    border-radius: 10px;
+    margin: 4px;
+    position: relative;
+    z-index: 4;
+    left: 720px;
+    top: 15px;
+  
+    transform-origin: 4px 0px;
+  
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+
+}
+
+
+
+
+
+
+
+/* mobile devices-------------------------------------*/
+
+
+
+
+
+  @media only screen and (max-width: 700px) {
+
+    header {
+      height: 50px;
+      width: 100%;
+     
+    }
+    
+    #nav {
+      position: relative;
+      display: block;
+    }
+    
+    #nav input {
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      top: 0px;
+      left: 320px;
+      z-index: 5;
+      opacity: 0;
+    }
+    
+    /* burger menu */
+    #nav span {
+      height: 4px;
+      width: 30px;
+      display: block;
+      background: white;
+      border-radius: 10px;
+      margin: 4px;
+      position: relative;
+      z-index: 4;
+      left: 325px;
+      top: 5px;
+    
+      transform-origin: 4px 0px;
+    
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    }
+    /*------------------- burger transformations ------------------*/
+    #nav span:first-child {
+      transform-origin: 0% 0%;
+    }
+    
+    #nav span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+    #nav input:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -2px);
+      background: #232323;
+    }
+    #nav input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    #nav input:checked ~ span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, 0px);
+    }
+    
+    /*------------Food menu *---------------*/
+    #menu {
+      height: 0vh;
+      width: 100%;
+      background: white;
+      opacity: 1;
+      margin-top: -40px;
+      transition: height 0.5s ease-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index:2;
+      position:absolute;
+    }
+    
+    #nav input:checked ~ #menu {
+      height: 100vh;
+      transition: height 0.5s ease-in;
+      opacity: 0.8;
+    }
+    
+    #menu ul {
+      list-style-type: none;
+      font-size: 30px;
+      opacity: 0;
+      height:100px;
+      font-family: 'Yusei Magic', sans-serif;
+      margin-top:-120px;
+    }
+    #nav input:checked ~ #menu ul {
+      opacity: 1;
+      transition: opacity 1s;
+    }
+    #menu li {
+      margin:20px;
+      color:#F67B50;
+    
+    
+    }
+    /*--------- Button-----------*/
+    #myButton {
+      box-shadow:inset 0px 0px 0px 0px #f9eca0;
+      background:linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
+      background-color:#f0c911;
+      border-radius:6px;
+      display:inline-block;
+      cursor:pointer;
+      color:#c92200;
+      font-family: 'Yusei Magic', sans-serif;
+      font-size:18px;
+      font-weight:bold;
+      padding:21px 37px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #ded17c;
+      margin-bottom:50px;
+      border:4px solid red;
+    }
+    #myButton:hover {
+      background:linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
+      background-color:#f2ab1e;
+    }
+    #myButton:active {
+      position:relative;
+      top:1px;
+    }
+    
+         
+    
+    
+    /*-----hero image logo */
+    
+    #hero-image-logo{
+        background-image:url("./assets/top-logo.jpg");
+        height:550px;
+        width:100%;
+          /* Background image is centered vertically and horizontally at all times */
+      background-position: center center;
+      
+      /* Background image doesn't tile */
+      background-repeat: no-repeat;
+      
+      /* Background image is fixed in the viewport so that it doesn't move when 
+         the content's height is greater than the image's height */
+    
+      
+      /* This is what makes the background image rescale based
+         on the container's size */
+      background-size: cover;
+      margin-top:-55px;
+      display:flex;
+      justify-content: center;
+      align-items: flex-end;
+      
+    
+      
+      
+    
+    }
+    /*-----------photo carolsel */
     .simple-slider {
         position: relative;
         width: 100%;
@@ -401,5 +989,216 @@ footer h3{
         opacity: 0;
         z-index: -1;
       }
+
+      /* logo-----------------------*/
+
+#logo{
+   
+  position:relative;
+  bottom:300px;
+}
+/*----------description and order */
+
+#description{
+
+  width:100%;
+  height:750px;
+  background-color: #A82810;
+  display:flex;
+ 
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-top:-10px;
+  
+
+
+}
+
+#description h1{
+   color:white;
+   font-family: 'Yusei Magic', sans-serif;
+   font-size:45px;
+ 
+
+
+
+   
+}
+
+#description h1:last-child{
+color:white;
+font-family: 'Yusei Magic', sans-serif;
+font-size:65px;
+}
+
+#description img{
+height:80px;
+width:80px;
+color:white;
+margin-top:-40px;
+margin-bottom:-30px;
+}
+#description p{
+ color:white;
+ font-family: 'Yusei Magic', sans-serif;
+ width:90%;
+ text-align:justify;
+}
+
+#description h1:nth-child(2){
+  
+}
+
+
+/*------food menu ----*/
+
+#food-menu{
+ height:1100px;
+ font-family: 'Yusei Magic', sans-serif;
+ display:flex;
+ justify-content: flex-start;
+ align-items: center;
+ flex-direction: column;
+}
+
+#food-menu h1 {
+ font-size:45px;
+ text-decoration: underline;
+}
+
+#food-menu h2{
+ color:#A82810;
+ margin-bottom:-5px;
+}
+
+#food-menu ul{
+list-style-type: none;
+}
+
+.item-description{
+color:grey;
+margin-bottom:5px;
+}
+
+
+/*--------------specials----*/
+#specials{
+display:flex;
+justify-content: center;
+align-items:center;
+flex-direction:column;
+height:1020px;
+margin-top:20px;
+
+}
+#specials #specials-bar{
+width:100%;
+height:70px;
+background-color: #A82810;
+color:white;
+ font-family: 'Yusei Magic', sans-serif;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+
+ 
+}
+
+#specials img{
+height:300px;
+width:100%;
+}
+
+
+/*----------find us section -----------*/
+#find-us{
+display:flex;
+flex-direction:column;
+justify-content: center;
+align-items: center;
+
+margin-top:0;
+}
+
+#find-us h1{
+
+font-family: 'Yusei Magic', sans-serif;
+font-size:45px;
+text-decoration: underline;
+
+}
+
+iframe{
+width:95%;
+margin-bottom:10px;
+}
+#map-area{
+height:800px;
+width:100%;
+background-color: #A82810;
+display:flex;
+flex-direction:column;
+justify-content: flex-start;
+align-items: center;
+
+
+}
+
+#map-area img{
+height:50px;
+width:50px;
+}
+
+#map-area h2{
+font-family: 'Yusei Magic', sans-serif;
+color:white;
+text-align: center;
+text-decoration: underline;
+font-size: 30px;
+}
+#map-area ul{
+list-style-type:none;
+font-family: 'Yusei Magic', sans-serif;
+color:white;
+font-size: 30px;
+}
+
+/* ---footer  ----*/
+
+footer{
+height:200px;
+display:block;
+margin-top:0;
+font-family: 'Yusei Magic', sans-serif;
+text-align: center;
+
+}
+footer h3{
+text-decoration: underline;
+}
+
+
+
+#social{
+height:70px;
+
+width:100%;
+
+display:flex;
+flex-direction: row;
+justify-content: center;
+align-items:center;
+border-bottom: 3px solid black;
+
+}
+
+#social img{
+height:40px;
+width:40px;
+margin:10px;
+}
+
+
  
   }
