@@ -446,7 +446,7 @@ footer h3{
     transform: rotate(-45deg) translate(0, 0px);
   }
   
-  /*------------Food menu *---------------*/
+  /*------------Nav-menu *---------------*/
   #menu {
     height: 0vh;
     width: 100%;
@@ -495,9 +495,9 @@ footer h3{
     cursor:pointer;
     color:#c92200;
     font-family: 'Yusei Magic', sans-serif;
-    font-size:18px;
+    font-size:28px;
     font-weight:bold;
-    padding:21px 37px;
+    padding:31px 47px;
     text-decoration:none;
     text-shadow:0px 1px 0px #ded17c;
     margin-bottom:150px;
@@ -557,7 +557,7 @@ footer h3{
    #description{
   
       width:100%;
-      height:750px;
+      height:1250px;
       background-color: #A82810;
       display:flex;
      
@@ -573,7 +573,7 @@ footer h3{
    #description h1{
        color:white;
        font-family: 'Yusei Magic', sans-serif;
-       font-size:45px;
+       font-size:75px;
      
     
    
@@ -584,12 +584,12 @@ footer h3{
    #description h1:last-child{
     color:white;
     font-family: 'Yusei Magic', sans-serif;
-    font-size:65px;
+    font-size:75px;
   }
   
   #description img{
-    height:80px;
-    width:80px;
+    height:120px;
+    width:120px;
     color:white;
     margin-top:-40px;
     margin-bottom:-30px;
@@ -599,6 +599,7 @@ footer h3{
      font-family: 'Yusei Magic', sans-serif;
      width:90%;
      text-align:justify;
+     font-size:30px;
    }
   
    #description h1:nth-child(2){
@@ -609,7 +610,7 @@ footer h3{
    /*------food menu ----*/
   
    #food-menu{
-     height:1100px;
+     height:2100px;
      font-family: 'Yusei Magic', sans-serif;
      display:flex;
      justify-content: flex-start;
@@ -625,6 +626,7 @@ footer h3{
    #food-menu h2{
      color:#A82810;
      margin-bottom:-5px;
+     font-size:45px;--------------------------------------------------------------------------------------------------
    }
   
   #food-menu ul{
@@ -634,6 +636,15 @@ footer h3{
   .item-description{
     color:grey;
     margin-bottom:5px;
+    font-size:35px;
+  }
+
+  .item{
+    font-size:35px;
+  }
+
+  #food-menu #myButton{
+    margin-top:30px;
   }
   
   
@@ -643,25 +654,26 @@ footer h3{
     justify-content: center;
     align-items:center;
     flex-direction:column;
-    height:1800px;
-    margin-top:20px;
+    height:2100px;
+    margin-top:60px;
    
   }
   #specials #specials-bar{
     width:100%;
-    height:170px;
+    height:370px;
     background-color: #A82810;
     color:white;
      font-family: 'Yusei Magic', sans-serif;
      display:flex;
      justify-content: center;
      align-items: center;
-    
+  
+         
      
   }
   
   #specials img{
-    height:600px;
+    height:700px;
     width:100%;
   }
   
@@ -1044,6 +1056,7 @@ margin-bottom:-30px;
  font-family: 'Yusei Magic', sans-serif;
  width:90%;
  text-align:justify;
+ font-size:16px;
 }
 
 #description h1:nth-child(2){
@@ -1070,6 +1083,7 @@ margin-bottom:-30px;
 #food-menu h2{
  color:#A82810;
  margin-bottom:-5px;
+ font-size:25px;
 }
 
 #food-menu ul{
@@ -1079,6 +1093,11 @@ list-style-type: none;
 .item-description{
 color:grey;
 margin-bottom:5px;
+font-size:16px;
+}
+
+.item{
+  font-size:16px;
 }
 
 
@@ -1089,7 +1108,7 @@ justify-content: center;
 align-items:center;
 flex-direction:column;
 height:1020px;
-margin-top:20px;
+margin-top:60px;
 
 }
 #specials #specials-bar{
