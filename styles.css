@@ -705,7 +705,7 @@ footer h3{
     width:100%;
     background-color: #A82810;
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     justify-content: flex-start;
     align-items: center;
   
