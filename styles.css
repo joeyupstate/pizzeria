@@ -36,7 +36,7 @@ header {
 #nav span {
   height: 4px;
   width: 30px;
-  display: block;
+  display: none;
   background: white;
   border-radius: 10px;
   margin: 4px;
@@ -73,7 +73,7 @@ header {
 
 /*------------Food menu *---------------*/
 #menu {
-  height: 0vh;
+  height: 100%;
   width: 100%;
   background: white;
   opacity: 1;
@@ -82,6 +82,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   z-index:2;
   position:absolute;
 }
@@ -95,20 +96,29 @@ header {
 #menu ul {
   list-style-type: none;
   font-size: 30px;
-  opacity: 0;
+  opacity: 1;
   height:100px;
   font-family: 'Yusei Magic', sans-serif;
-  margin-top:-120px;
+  margin-top:220px;
+ 
+  
 }
 #nav input:checked ~ #menu ul {
   opacity: 1;
   transition: opacity 1s;
 }
-#menu li {
+#menu ul li {
   margin:20px;
-  color:#F67B50;
+  color:white;
+  display:inline;
+ 
 
 
+}
+
+#menu ul li:hover{
+  cursor: pointer;
+  color:orange;
 }
 /*--------- Button-----------*/
 #myButton {
@@ -144,7 +154,7 @@ header {
 
 #hero-image-logo{
     background-image:url("./assets/pizzafullscreen.jpg");
-    height:900px;
+    height:800px;
     width:100%;
       /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
@@ -182,7 +192,7 @@ header {
  #description{
 
     width:100%;
-    height:750px;
+    height:1050px;
     background-color: #A82810;
     display:flex;
    
@@ -198,7 +208,7 @@ header {
  #description h1{
      color:white;
      font-family: 'Yusei Magic', sans-serif;
-     font-size:45px;
+     font-size:65px;
    
   
  
@@ -213,8 +223,8 @@ header {
 }
 
 #description img{
-  height:80px;
-  width:80px;
+  height:130px;
+  width:130px;
   color:white;
   margin-top:-40px;
   margin-bottom:-30px;
@@ -224,6 +234,7 @@ header {
    font-family: 'Yusei Magic', sans-serif;
    width:90%;
    text-align:justify;
+   font-size:35px;
  }
 
  #description h1:nth-child(2){
@@ -234,7 +245,7 @@ header {
  /*------food menu ----*/
 
  #food-menu{
-   height:1100px;
+   height:1950px;
    font-family: 'Yusei Magic', sans-serif;
    display:flex;
    justify-content: flex-start;
@@ -243,17 +254,19 @@ header {
  }
 
  #food-menu h1 {
-   font-size:45px;
+   font-size:65px;
    text-decoration: underline;
  }
 
  #food-menu h2{
    color:#A82810;
    margin-bottom:-5px;
+   font-size:45px;
  }
 
 #food-menu ul{
   list-style-type: none;
+  font-size:45px;
 }
 
 .item-description{
@@ -268,8 +281,9 @@ header {
   justify-content: center;
   align-items:center;
   flex-direction:column;
-  height:1020px;
+  height:1520px;
   margin-top:20px;
+  margin-bottom:150px;
  
 }
 #specials #specials-bar{
@@ -285,9 +299,38 @@ header {
    
 }
 
-#specials img{
+.static-img{
   height:300px;
   width:100%;
+  display:none;
+}
+
+/*------Carosel ---------------------------------*/
+
+
+.simple-slider {
+  position: relative;
+  width: 100%;
+  display:block;
+}
+
+.simple-slider_item {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+}
+
+.slider-img{
+  display:block;
+  height:900px;
+  width:100%;
+}
+.is-hidden {
+  opacity: 0;
+  z-index: -1;
 }
 
 
@@ -310,16 +353,17 @@ header {
 }
 
 iframe{
-  width:95%;
+  width:50%;
   margin-bottom:10px;
+
 }
 #map-area{
-  height:800px;
+  height:500px;
   width:100%;
   background-color: #A82810;
   display:flex;
-  flex-direction:column;
-  justify-content: flex-start;
+  flex-direction:row;
+  justify-content: space-around;
   align-items: center;
 
   
@@ -336,13 +380,20 @@ iframe{
   text-align: center;
   text-decoration: underline;
   font-size: 30px;
+  display:none;
 }
 #map-area ul{
   list-style-type:none;
   font-family: 'Yusei Magic', sans-serif;
   color:white;
-  font-size: 30px;
+  font-size: 40px;
 }
+#map-area li:first-child{
+  font-size:40px;
+  text-decoration: underline;
+}
+
+
 
 /* ---footer  ----*/
 
@@ -479,9 +530,10 @@ footer h3{
     opacity: 1;
     transition: opacity 1s;
   }
-  #menu li {
+  #menu ul li {
     margin:20px;
     color:#F67B50;
+    display:block;
   
   
   }
@@ -610,7 +662,7 @@ footer h3{
    /*------food menu ----*/
   
    #food-menu{
-     height:2100px;
+     height:2300px;
      font-family: 'Yusei Magic', sans-serif;
      display:flex;
      justify-content: flex-start;
@@ -672,11 +724,34 @@ footer h3{
      
   }
   
-  #specials img{
+  .static-img{
     height:700px;
     width:100%;
+    display:block;
   }
-  
+
+
+/*------Carosel ---------------------------------*/
+
+
+.simple-slider {
+  position: relative;
+  width: 304px;
+  display:none;
+}
+.simple-slider_item {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+}
+.is-hidden {
+  opacity: 0;
+  z-index: -1;
+}
+
   
   /*----------find us section -----------*/
   #find-us{
@@ -992,9 +1067,10 @@ footer h3{
       opacity: 1;
       transition: opacity 1s;
     }
-    #menu li {
+    #menu ul li {
       margin:20px;
       color:#F67B50;
+      display:block;
     
     
     }
@@ -1057,31 +1133,7 @@ footer h3{
       
     
     }
-    /*-----------photo carolsel */
-    .simple-slider {
-        position: relative;
-        width: 100%;
-        z-index:1;
-        margin-top:-100px;
-        display:none;
-      }
-      .simple-slider_item {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        -webkit-transition: opacity 2s;
-        transition: opacity 2s;
-      }
-    
-      .simple-slider_item img{
-          height:450px;
-          width:100%;
-      }
-      .is-hidden {
-        opacity: 0;
-        z-index: -1;
-      }
+  
 
       /* logo-----------------------*/
 
@@ -1148,7 +1200,7 @@ margin-bottom:-30px;
 /*------food menu ----*/
 
 #food-menu{
- height:1100px;
+ height:1300px;
  font-family: 'Yusei Magic', sans-serif;
  display:flex;
  justify-content: flex-start;
@@ -1205,10 +1257,35 @@ color:white;
  
 }
 
-#specials img{
+.static-img{
 height:300px;
 width:100%;
+display:block;
 }
+
+
+
+/*------Carosel ---------------------------------*/
+
+
+.simple-slider {
+position: relative;
+width: 304px;
+display:none;
+}
+.simple-slider_item {
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+-webkit-transition: opacity 2s;
+transition: opacity 2s;
+}
+.is-hidden {
+opacity: 0;
+z-index: -1;
+}
+
 
 
 /*----------find us section -----------*/
