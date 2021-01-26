@@ -192,7 +192,7 @@ header {
  #description{
 
     width:100%;
-    height:1050px;
+    height:900px;
     background-color: #A82810;
     display:flex;
    
@@ -208,7 +208,7 @@ header {
  #description h1{
      color:white;
      font-family: 'Yusei Magic', sans-serif;
-     font-size:65px;
+     font-size:55px;
    
   
  
@@ -232,9 +232,9 @@ header {
  #description p{
    color:white;
    font-family: 'Yusei Magic', sans-serif;
-   width:90%;
+   width:50%;
    text-align:justify;
-   font-size:35px;
+   font-size:25px;
  }
 
  #description h1:nth-child(2){
@@ -247,10 +247,11 @@ header {
  #food-menu{
    height:1950px;
    font-family: 'Yusei Magic', sans-serif;
-   display:flex;
+   display:none;
    justify-content: flex-start;
    align-items: center;
    flex-direction: column;
+   
  }
 
  #food-menu h1 {
@@ -278,13 +279,35 @@ header {
 /*--------------specials----*/
 #specials{
   display:flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items:center;
-  flex-direction:column;
-  height:1520px;
-  margin-top:20px;
-  margin-bottom:150px;
+  flex-direction:row;
+  height:320px;
+  margin-top:0px;
+  margin-bottom:20px;
  
+
+ 
+}
+#special-discription{
+
+ 
+  height:320px;
+  width:400px;
+
+}
+
+#special-discription h1{
+  font-family: 'Yusei Magic', sans-serif;
+  text-decoration:underline;
+  font-size:45px;
+}
+
+#special-discription p {
+  font-size:25px;
+  text-decoration: none;
+  font-family: 'Yusei Magic', sans-serif;
+  display:block;
 }
 #specials #specials-bar{
   width:100%;
@@ -300,38 +323,15 @@ header {
 }
 
 .static-img{
-  height:300px;
-  width:100%;
-  display:none;
-}
-
-/*------Carosel ---------------------------------*/
-
-
-.simple-slider {
-  position: relative;
-  width: 100%;
+  height:320px;
+  width:430px;
   display:block;
 }
 
-.simple-slider_item {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  -webkit-transition: opacity 2s;
-  transition: opacity 2s;
+.static-img:last-child{
+  display:block;
 }
 
-.slider-img{
-  display:block;
-  height:900px;
-  width:100%;
-}
-.is-hidden {
-  opacity: 0;
-  z-index: -1;
-}
 
 
 /*----------find us section -----------*/
@@ -420,7 +420,7 @@ footer h3{
   flex-direction: row;
   justify-content: center;
   align-items:center;
-  border-bottom: 3px solid black;
+ 
 
 }
 
@@ -706,8 +706,9 @@ footer h3{
     justify-content: center;
     align-items:center;
     flex-direction:column;
-    height:2100px;
+    height:2350px;
     margin-top:60px;
+    margin-bottom:30px;
    
   }
   #specials #specials-bar{
@@ -723,12 +724,36 @@ footer h3{
          
      
   }
+  #special-discription{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+     
+      height:320px;
+      width:750px;
+    
+    
+    }
+    #special-discription p {
+      font-size:35px;
+    }
   
   .static-img{
     height:700px;
     width:100%;
     display:block;
   }
+
+  .static-img:last-child{
+    display:none;
+  }
+  
+  #specials h1{
+    font-size:45px;
+    text-decoration: underline;
+  }
+  
 
 
 /*------Carosel ---------------------------------*/
@@ -1240,7 +1265,7 @@ display:flex;
 justify-content: center;
 align-items:center;
 flex-direction:column;
-height:1020px;
+height:1320px;
 margin-top:60px;
 
 }
@@ -1263,7 +1288,34 @@ width:100%;
 display:block;
 }
 
+.static-img:last-child{
+  display:none;
+}
 
+#special-discription{
+display:flex;
+flex-direction:column;
+justify-content: center;
+align-items:center;
+ 
+  height:320px;
+  width:350px;
+
+
+}
+
+#special-discription h1{
+  font-family: 'Yusei Magic', sans-serif;
+  text-decoration:underline;
+  font-size:35px;
+}
+
+#special-discription p {
+  font-size:25px;
+  text-decoration: none;
+  font-family: 'Yusei Magic', sans-serif;
+  display:block;
+}
 
 /*------Carosel ---------------------------------*/
 
