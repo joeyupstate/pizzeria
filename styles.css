@@ -135,7 +135,7 @@ header {
   padding:21px 37px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ded17c;
-  margin-bottom:150px;
+  margin-bottom:50px;
   border:4px solid red;
 }
 #myButton:hover {
@@ -245,34 +245,73 @@ header {
  /*------food menu ----*/
 
  #food-menu{
-   height:1950px;
+   height:750px;
    font-family: 'Yusei Magic', sans-serif;
-   display:none;
-   justify-content: flex-start;
+   display:flex;
+   justify-content: center;
    align-items: center;
    flex-direction: column;
+   border-bottom:3px solid black;
+ 
    
  }
 
+ #menu-div{
+   display:flex;
+   justify-content: center;
+   align-items: flex-start;
+   flex-direction: row;
+   
+ }
+ #app-div{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:10px;
+
+}
+#pizza-div{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:10px;
+
+
+}
+#pizza-style-div{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:10px;
+
+
+}
+
  #food-menu h1 {
-   font-size:65px;
+   font-size:35px;
    text-decoration: underline;
  }
 
  #food-menu h2{
    color:#A82810;
    margin-bottom:-5px;
-   font-size:45px;
+   font-size:35px;
  }
 
 #food-menu ul{
   list-style-type: none;
-  font-size:45px;
+  font-size:25px;
 }
 
 .item-description{
   color:grey;
   margin-bottom:5px;
+}
+.divider{
+  display:none;
 }
 
 
@@ -285,13 +324,14 @@ header {
   height:320px;
   margin-top:0px;
   margin-bottom:20px;
+  
  
 
  
 }
 #special-discription{
-
- 
+background-color:#A82810;
+color:white;
   height:320px;
   width:400px;
 
@@ -301,6 +341,7 @@ header {
   font-family: 'Yusei Magic', sans-serif;
   text-decoration:underline;
   font-size:45px;
+  margin-left:5px;
 }
 
 #special-discription p {
@@ -308,6 +349,7 @@ header {
   text-decoration: none;
   font-family: 'Yusei Magic', sans-serif;
   display:block;
+  margin-left:5px;
 }
 #specials #specials-bar{
   width:100%;
@@ -669,6 +711,13 @@ footer h3{
      align-items: center;
      flex-direction: column;
    }
+   #menu-div{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    
+  }
   
    #food-menu h1 {
      font-size:45px;
@@ -709,6 +758,8 @@ footer h3{
     height:2350px;
     margin-top:60px;
     margin-bottom:30px;
+    border-bottom:none;
+    overflow:hidden;
    
   }
   #specials #specials-bar{
@@ -1225,14 +1276,34 @@ margin-bottom:-30px;
 /*------food menu ----*/
 
 #food-menu{
- height:1300px;
+ height:1200px;
  font-family: 'Yusei Magic', sans-serif;
  display:flex;
  justify-content: flex-start;
  align-items: center;
  flex-direction: column;
 }
+#app-div{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+}
+#pizza-div{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+#pizza-style-div{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
 #food-menu h1 {
  font-size:45px;
  text-decoration: underline;
@@ -1281,6 +1352,14 @@ color:white;
 
  
 }
+#special-discription{
+  background-color:white;
+  color:black;
+    height:320px;
+    width:400px;
+  
+  }
+  
 
 .static-img{
 height:300px;
