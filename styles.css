@@ -251,7 +251,7 @@ header {
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   border-bottom:3px solid black;
+   
  
    
  }
@@ -322,9 +322,9 @@ header {
   align-items:center;
   flex-direction:row;
   height:320px;
-  margin-top:0px;
+  margin-top:90px;
   margin-bottom:20px;
-  
+  overflow: hidden;
  
 
  
@@ -342,6 +342,8 @@ color:white;
   text-decoration:underline;
   font-size:45px;
   margin-left:5px;
+  white-space: nowrap;
+  width:400px;
 }
 
 #special-discription p {
@@ -783,11 +785,17 @@ footer h3{
      
       height:320px;
       width:750px;
+      background-color:white;
+      color:black;
     
+      
+  
     
     }
     #special-discription p {
       font-size:35px;
+      color:black;
+      
     }
   
   .static-img{
@@ -1282,6 +1290,7 @@ margin-bottom:-30px;
  justify-content: flex-start;
  align-items: center;
  flex-direction: column;
+ border-bottom:none;
 }
 #app-div{
   display:flex;
@@ -1356,10 +1365,27 @@ color:white;
   background-color:white;
   color:black;
     height:320px;
-    width:400px;
+    width:3250px;
+    font-size:20px;
+    display:flex;
+flex-direction:column;
+justify-content: center;
+align-items:center;
+text-align: center;
+
   
   }
+
+  #special-discription h1{
+    white-space: normal;
+
+
+  }
   
+  #special-discription p{
+    white-space:normal;
+    width:300px;
+  }
 
 .static-img{
 height:300px;
@@ -1371,17 +1397,6 @@ display:block;
   display:none;
 }
 
-#special-discription{
-display:flex;
-flex-direction:column;
-justify-content: center;
-align-items:center;
- 
-  height:320px;
-  width:350px;
-
-
-}
 
 #special-discription h1{
   font-family: 'Yusei Magic', sans-serif;
@@ -1390,7 +1405,7 @@ align-items:center;
 }
 
 #special-discription p {
-  font-size:25px;
+  font-size:20px;
   text-decoration: none;
   font-family: 'Yusei Magic', sans-serif;
   display:block;
